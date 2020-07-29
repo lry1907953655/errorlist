@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="com.resource_manage.web">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="com.resource_manage.exception_info-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.resource_manage.exception_info/com.resource_manage.exception_info">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.resource_manage.common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.resource_manage.common/com.resource_manage.common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="com.resource_manage.web"/>
+        <property name="java-output-path" value="/com.resource_manage.web/target/classes"/>
+    </wb-module>
+</project-modules>

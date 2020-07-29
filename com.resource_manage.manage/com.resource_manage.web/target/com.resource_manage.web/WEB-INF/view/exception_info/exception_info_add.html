@@ -1,0 +1,119 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>资源管理系统</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" th:href="@{/layui-v2.5.6/layui/css/layui.css}" />
+<link rel="stylesheet"
+	th:href="@{/layui-v2.5.6/layui/css/modules/code.css}" />
+<link rel="stylesheet"
+	th:href="@{/layui-v2.5.6/layui/css/modules/layer/default/layer.css}" />
+<script th:src="@{/layui-v2.5.6/layui/jquery-3.4.1.min.js}"></script>
+<script th:src="@{/layui-v2.5.6/layui/layui.js}"></script>
+<script th:src="@{/layui-v2.5.6/layui/lay/modules/layer.js}"></script>
+<script th:src="@{/layui-v2.5.6/layui/lay/modules/form.js}"></script>
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+
+		<!-- 头部导航 -->
+		<div th:replace="common/header :: header"></div>
+
+		<!-- 左部导航 -->
+		<div th:replace="common/left :: left"></div>
+
+		<div class="layui-body">
+			<!-- 内容主体区域 -->
+			<div style="padding: 15px;">
+
+				<div style="text-align: center;">
+					<h2>异常查看</h2>
+					<hr />
+				</div>
+
+				<form action="/exceptionInfo/add" method="post">
+
+					<!-- <div class="layui-form-item">
+						<label class="layui-form-label">主键</label>
+						<div class="layui-input-inline">
+							<input type="text" name="id" class="layui-input">
+						</div>
+						<div class="layui-form-mid layui-word-aux">主键</div>
+					</div> -->
+
+					<div class="layui-form-item">
+						<label class="layui-form-label">异常名</label>
+						<div class="layui-input-block">
+							<input type="text" name="name" class="layui-input">
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<label class="layui-form-label">中文异常名</label>
+						<div class="layui-input-block">
+							<input type="text" name="chName" class="layui-input">
+						</div>
+					</div>
+
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">出现原因</label>
+						<div class="layui-input-block">
+							<textarea name="reason" placeholder="请输入内容" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">异常信息</label>
+						<div class="layui-input-block">
+							<textarea name="exceptionInfo" placeholder="请输入内容" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<label class="layui-form-label">解决网址</label>
+						<div class="layui-input-block">
+							<input type="text" name="solveAddress" class="layui-input">
+						</div>
+					</div>
+					
+					
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">解决信息</label>
+						<div class="layui-input-block">
+							<textarea name="solveInfo" placeholder="请输入内容" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					
+					
+					<div class="layui-form-item layui-form-text">
+						<label class="layui-form-label">完整信息名</label>
+						<div class="layui-input-block">
+							<textarea name="completeInfo" placeholder="请输入内容" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button type="submit" class="layui-btn" lay-submit=""
+								lay-filter="demo1">立即提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- 左部导航 -->
+		<div th:replace="common/footer :: footer"></div>
+	</div>
+</body>
+</html>

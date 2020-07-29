@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>壹研科技左部</title>
+</head>
+<body>
+	<div class="layui-side layui-bg-black" th:fragment="left" id="left">
+		<div class="layui-side-scroll">
+			<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+			<ul class="layui-nav layui-nav-tree" lay-filter="test">
+				<li class="layui-nav-item"><a href="/system/backstage">首页</a></li>
+				<!-- <li class="layui-nav-item "><a href="javascript:;">伪技术无创血糖仪</a>
+					<dl class="layui-nav-child">
+						<dd class="layui-this">
+							<a href="/system/backstage/pseudo_technology/type">类型管理</a>
+						</dd>
+						<dd>
+							<a href="/system/backstage/pseudo_technology/product">伪技术产品管理</a>
+						</dd>
+					</dl>
+				</li>
+				 -->
+				<li class="layui-nav-item layui-nav-itemed"><a href="/exceptionInfo">异常管理</a></li>
+				<li class="layui-nav-item"><a href="https://blog.csdn.net/huxing998/article/details/90481524"  target="_blank">Java 异常大全</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

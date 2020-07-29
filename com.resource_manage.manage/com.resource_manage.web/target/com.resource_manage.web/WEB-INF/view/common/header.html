@@ -1,0 +1,65 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>资源管理系统头部</title>
+</head>
+<body>
+	<div class="layui-header" th:fragment="header" id="header">
+		<div style="padding: 3px;">
+			<!-- <img src="/images/ico/favicon.png" height="50px" /> -->
+		</div>
+		<div class="layui-logo">资源管理系统</div>
+		<!-- 头部区域（可配合layui已有的水平导航） -->
+		<ul class="layui-nav layui-layout-left">
+			<li class="layui-nav-item"><a href="/system/system_user">后台用户管理</a></li>
+			<li class="layui-nav-item"><a href="">控制台</a></li>
+			<li class="layui-nav-item"><a href="">用户信息</a></li>
+			<li class="layui-nav-item"><a href="javascript:;">系统管理</a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="">邮件管理</a>
+					</dd>
+					<dd>
+						<a href="">消息管理</a>
+					</dd>
+					<dd>
+						<a href="">授权管理</a>
+					</dd>
+				</dl></li>
+		</ul>
+
+		<ul class="layui-nav layui-layout-right">
+			<li class="layui-nav-item"><a href="javascript:;"> 管理员：
+					Admin </a>
+				<dl class="layui-nav-child">
+					<dd>
+						<a href="">基本资料</a>
+					</dd>
+					<dd>
+						<a href="">安全设置</a>
+					</dd>
+				</dl></li>
+			<li class="layui-nav-item"><a href="">退出系统</a></li>
+		</ul>
+
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+		</script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?d214947968792b839fd669a4decaaffc";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+	</div>
+</body>
+</html>
